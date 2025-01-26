@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #9d00ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 30px;
+}
+
+.header-text h1 span {
+    color: #9d00ff;
+}
+
+#about .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#about p {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #ababab;
+}
+
+#projects {
+    padding: 80px 0;
+    color: #fff;
+    background-color: #111;
+}
+
+#projects .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    flex: 1;
+    min-width: 300px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #9d00ff;
+}
+
+#contact {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input, #contact textarea, #contact button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact input, #contact textarea {
+    background: #333;
+    color: #fff;
+}
+
+#contact button {
+    background: #9d00ff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact button:hover {
+    background: #6b00cc;
+}
+
+#about .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-col-2 {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.about-col-2 h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-col-2 p {
+    line-height: 1.6;
+    font-size: 18px;
+    color: #ababab;
+}
+
+#skills {
+    padding: 80px 0;
+    color: #fff;
+    background-color: #111;
+    text-align: center;
+}
+
+#skills .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.skill h3 {
+    color: #9d00ff;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: #ababab;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container, .header-text, .about-col-1 img, .about-col-2, .skill, .project {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project {
+    flex: 1;
+    min-width: 300px;
+    max-width: 30%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.project:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.project h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #9d00ff;
+    position: relative;
+    z-index: 2;
+}
+
+.project:hover h3 {
+    color: #fff;
+}
+
+.skill {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(157, 0, 255, 0.6);
+}
+
+.about-col-1 img {
+    animation: fadeIn 1.2s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-col-1 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#contact button {
+    background: linear-gradient(to right, #9d00ff, #6b00cc);
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#contact button:hover {
+    background: linear-gradient(to left, #9d00ff, #6b00cc);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(157, 0, 255, 0.5);
+}
+
+.header-text {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header-text h1 span {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        color: #9d00ff;
+        text-shadow: 0 0 5px #9d00ff, 0 0 10px #6b00cc;
+    }
+    50% {
+        color: #fff;
+        text-shadow: 0 0 20px #9d00ff, 0 0 30px #6b00cc;
+    }
+}
